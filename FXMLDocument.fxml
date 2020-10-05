@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="319.0" style="-fx-background-color: #4C4C4C;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="potus.FXMLDocumentController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="319.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="Close_Rb" mnemonicParsing="false" onAction="#TerminateApp" text="Close" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Mode">
+            <items>
+                  <RadioMenuItem fx:id="Order_Rb" mnemonicParsing="false" onAction="#Order" text="Order">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Mode" />
+                     </toggleGroup></RadioMenuItem>
+                  <RadioMenuItem fx:id="Name_Rb" mnemonicParsing="false" onAction="#Name" text="Name" toggleGroup="$Mode" />
+                  <RadioMenuItem fx:id="Photo_Rb" mnemonicParsing="false" onAction="#Photo" text="Photo" toggleGroup="$Mode" />
+                  <RadioMenuItem fx:id="Free_Rb" mnemonicParsing="false" onAction="#Free" text="Free" toggleGroup="$Mode" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <RadioMenuItem fx:id="Date_Rb" mnemonicParsing="false" onAction="#Date" text="Date">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Setting" />
+                     </toggleGroup></RadioMenuItem>
+                  <RadioMenuItem fx:id="Soun_Rb" mnemonicParsing="false" onAction="#Sound" text="Sound">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Setting_" />
+                     </toggleGroup></RadioMenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fx:id="Image_1" fitHeight="200.0" fitWidth="159.0" layoutY="25.0" onMouseClicked="#Image_1_Function">
+         <image>
+            <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/Potus/Resources/1_1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Image_2" fitHeight="200.0" fitWidth="159.0" layoutX="159.0" layoutY="25.0" onMouseClicked="#Image_2_Function">
+         <image>
+            <Image url="file:/C:/Users/shabi/Documents/NetBeansProjects/Potus/Resources/1_2.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="ID_Tf" alignment="CENTER" layoutX="107.0" layoutY="239.0" onAction="#vote" prefHeight="35.0" prefWidth="105.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" text="45">
+         <font>
+            <Font name="Courier New Bold" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="Name_Tf" alignment="CENTER" layoutX="4.0" layoutY="284.0" onAction="#vote" prefHeight="35.0" prefWidth="313.0" style="-fx-background-radius: 20; -fx-border-radius: 20;" text="George Herbert Walker Bush 1989 1993">
+         <font>
+            <Font name="Courier New Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="vote_Bt" layoutX="225.0" layoutY="238.0" mnemonicParsing="false" onAction="#vote" prefHeight="38.0" prefWidth="81.0" style="-fx-background-radius: 20; -fx-border-radius: 20;">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@../../Resources/Election_Icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
